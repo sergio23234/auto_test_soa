@@ -10,7 +10,6 @@ var corsOptions = {
 
 const app = express();
 const PORT = 4999;
-const HOST = 127.0.0.1;
 app.use(express.json({ limit: '50mb' }));
 app.use(cors());
 // Constants
@@ -21,8 +20,8 @@ app.get('/', (req, res) => {
 });
 
 
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+app.listen(PORT);
+console.log(`Running on http://localhost:4999`);
 
 function enableCors(res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
